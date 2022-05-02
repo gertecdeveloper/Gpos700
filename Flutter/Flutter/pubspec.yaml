@@ -1,0 +1,27 @@
+name: flutter_gertec
+description: A new Flutter project.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_screenutil: ^0.5.2
+  auto_size_text: ^2.1.0
+  flutter_masked_text: ^0.8.0
+  cupertino_icons: ^0.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  assets:
+    - assets/
+    - assets/xmlSat/arq_cancelamento.xml
+    - assets/xmlSat/arq_venda_008_Simples_Nacional.xml
+
+  uses-material-design: true

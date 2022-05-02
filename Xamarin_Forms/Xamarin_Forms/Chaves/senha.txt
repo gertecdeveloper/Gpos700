@@ -1,0 +1,16 @@
+SDK
+https://www.adrive.com/public/RQfMMr/20190725_SDK_GPOS700_147.zip
+
+Chave Customer
+Senha: Development@GertecDeveloper2018
+Alias: developmentgertecdeveloper_customerapp
+Senha Alias: Development@GertecDeveloper2018
+
+Chave Enhanced
+Senha: Development@GertecDeveloper2018
+Alias: developmentgertecdeveloper_enhancedapp
+Senha Alias: Development@GertecDeveloper2018
+
+<Reference Include="TSG800">
+      <HintPath>C:\Users\Mama\Documents\gertecdev\gertecXamarin\ExemploImpressao\TSG800.dll</HintPath>
+    </Reference>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GertecXamarinForms.Sat.Ferramentas">
+    <ContentPage.Content>
+        <StackLayout Padding="5">
+            <StackLayout Orientation="Vertical">
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Código de Ativação SAT:" VerticalOptions="Center" FontSize="15" TextColor="Black" FontAttributes="Bold"/>
+                    <Entry x:Name="codAtivacao" HorizontalOptions="FillAndExpand" />
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical" VerticalOptions="Center" Spacing="15" Padding="30">
+                    <Button Text="Desbloquear sat"
+                        FontAttributes="Bold"
+                        Clicked="btnDesbloquerSat">
+                    </Button>
+
+                    <Button Text="Bloquear sat"
+                        FontAttributes="Bold"
+                        Clicked="btnBloquearSat">
+                    </Button>
+                    
+                    <Button Text="Extrair Log"                        
+                        FontAttributes="Bold"
+                        Clicked="btnExtrairLog">
+                    </Button>
+
+                    <Button Text="Atualizar software"                        
+                        FontAttributes="Bold"
+                        Clicked="btnAtualizar">
+                    </Button>
+
+                    <Button Text="Verificar Versão"                        
+                        FontAttributes="Bold"
+                        Clicked="btnVersao">
+                    </Button>
+                </StackLayout>
+
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

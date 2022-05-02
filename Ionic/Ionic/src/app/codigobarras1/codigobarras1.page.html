@@ -1,0 +1,18 @@
+<ion-content>
+  <ion-row>
+    <ion-col>
+      <h1>Ler código de barras</h1>
+    </ion-col>
+  </ion-row>
+  <div class="buttons">
+    <ion-button (click)="EAN_8()">EAN 8</ion-button>
+    <ion-button (click)="EAN_13()">EAN 13</ion-button>
+    <ion-button (click)="EAN_14()">EAN 14</ion-button>
+    <ion-button (click)="QR_CODE()">QR CODE</ion-button>
+  </div>
+  <ion-list class="resultados">
+    <ion-item *ngFor="let item of items">
+      <span>{{item.Formato}}: {{item.Resultado}}</span>
+    </ion-item>
+  </ion-list>
+</ion-content>

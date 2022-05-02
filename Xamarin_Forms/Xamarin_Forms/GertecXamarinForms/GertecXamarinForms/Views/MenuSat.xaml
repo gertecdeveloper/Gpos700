@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="GertecXamarinForms.Views.MenuSat">
+    <ContentPage.Content>
+        <StackLayout Padding="6">
+            
+            <StackLayout Spacing="0" Margin="10">
+                <Label x:Name="lblVersao" Text="GERSAT - Aplicativo de Ativação" VerticalOptions="Center" HorizontalOptions="Center" 
+                        TextColor="Black" FontSize="24" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+
+            </StackLayout>           
+
+            <StackLayout Orientation="Vertical" Margin="20" Spacing="10">
+                <Button Text="Ativação sat" Clicked="btnAtivacao" TextColor="Black" FontAttributes="Bold"/>
+                <Button Text="Associar Assinatura" Clicked="btnAssociar" TextColor="Black" FontAttributes="Bold"/>
+                <Button Text="Teste Sat" Clicked="btnTesteSat" TextColor="Black" FontAttributes="Bold"/>
+                <Button Text="Configurações de Rede"  Clicked="btnRede"  TextColor="Black" FontAttributes="Bold"/>
+                <Button Text="Alterar Código de Ativação" Clicked="btnAlterar" TextColor="Black" FontAttributes="Bold"/>               
+                <Button Text="Outras Ferramentas" Clicked="btnFerramentas" TextColor="Black" FontAttributes="Bold"/>
+            </StackLayout>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage> 

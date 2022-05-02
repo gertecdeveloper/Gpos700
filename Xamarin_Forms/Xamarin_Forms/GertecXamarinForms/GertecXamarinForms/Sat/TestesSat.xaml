@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GertecXamarinForms.Sat.TestesSat">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <StackLayout Orientation="Vertical">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Código de Ativação SAT:" VerticalOptions="Center" FontSize="15" TextColor="Black" FontAttributes="Bold"/>
+                    <Entry x:Name="codAtivacao" HorizontalOptions="FillAndExpand" />
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical" VerticalOptions="Center" Spacing="20" Padding="30">
+                    <Button Text="Consultar sat"
+                        FontAttributes="Bold"
+                        Clicked="btnContultarSat">
+                    </Button>
+
+                    <Button Text="Status Operacional"
+                        FontAttributes="Bold"
+                        Clicked="btnStatusSat">
+                    </Button>
+
+                    <Button Text="Teste Fim a Fim"                        
+                        FontAttributes="Bold"
+                        Clicked="btnTesteSat">
+                    </Button>
+
+                    <Button Text="Enviar dados de Venda"                        
+                        FontAttributes="Bold"
+                        Clicked="btnEnviarVenda">
+                    </Button>
+
+                    <Button Text="Cancelar venda"                        
+                        FontAttributes="Bold"
+                        Clicked="btnCancelarVenda">
+                    </Button>
+
+                    <Button Text="Consultar sessão"                        
+                        FontAttributes="Bold"
+                        Clicked="btnConsultarSessao">
+                    </Button>
+                </StackLayout>
+
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

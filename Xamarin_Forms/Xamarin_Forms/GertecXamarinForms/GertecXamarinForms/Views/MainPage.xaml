@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="GertecXamarinForms.Views.MainPage">
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Image">
+                <Setter Property="WidthRequest" Value="60" />
+            </Style>
+            <Style x:Key="MenuLabel" TargetType="Label">
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="TextColor" Value="Gray" />
+            </Style>
+            <Style x:Key="MenuStackLayout" TargetType="StackLayout">
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="Orientation" Value="Horizontal"/>
+                <Setter Property="HorizontalOptions" Value="Start"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources> 
+
+    <StackLayout Spacing="20" Padding="2, 30">
+        <Image Source="gertec.png" HorizontalOptions="Center" VerticalOptions="Start" WidthRequest = "400" />
+        <Label x:Name="lblVersao" Text="Xamarin Forms - 1.0.0" HorizontalOptions="Center" FontSize="25" FontAttributes="Bold"/>
+
+        <TableView Intent="Form" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="315" HasUnevenRows="True">
+            <TableView.Root>
+                <TableSection >
+                    <ViewCell Tapped="codiBarras" Height="75">
+                        <StackLayout VerticalOptions="Start" Orientation="Horizontal" Spacing="58" >
+                            <Image Source="barcode.png"  />
+                            <Label Style="{StaticResource MenuLabel}" Text="Código de Barras"/>
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell Tapped="codiBarrasV2" Height="78">
+                        <StackLayout Style="{StaticResource MenuStackLayout}" Spacing="45"  >
+                            <Image Source="qr_code.png" />
+                            <Label Style="{StaticResource MenuLabel}" Text="Código de Barras V2"/>
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell Tapped="imprimir" Height="78">
+                        <StackLayout Style="{StaticResource MenuStackLayout}" Spacing="80">
+                            <Image Source="print.png"  />
+                            <Label Style="{StaticResource MenuLabel}" Text="Impressão" />
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell Tapped="nfcGedi" Height="78">
+                        <StackLayout Style="{StaticResource MenuStackLayout}" Spacing="85" >
+                            <Image Source="ic_nfc.png"  />
+                            <Label Style="{StaticResource MenuLabel}" Text="NFC Gedi" />
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell Tapped="nfcId" Height="78">
+                        <StackLayout Style="{StaticResource MenuStackLayout}" Spacing="95"  >
+                            <Image Source="nfc1.png"  />
+                            <Label Style="{StaticResource MenuLabel}" Text="NFC Id" />
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell Tapped="tef" Height="78">
+                        <StackLayout Style="{StaticResource MenuStackLayout}" Spacing="95"  >
+                            <Image Source="pos.png"  />
+                            <Label Style="{StaticResource MenuLabel}" Text="TEF" />
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell Tapped="sat" Height="78">
+                        <StackLayout Style="{StaticResource MenuStackLayout}" Spacing="95"  >
+                            <Image Source="icon_sat.png"  />
+                            <Label Style="{StaticResource MenuLabel}" Text="SAT" />
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+            </TableView.Root>
+        </TableView>
+    </StackLayout>
+</ContentPage>

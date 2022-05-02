@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2019/06/17 14:17:11.000.936,=C:\Users\msaporetti\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/06/17 14:17:34.000.182,C:\Marcos\Gertec\Delphi\GER7 - RC0\Unit1.pas=C:\Users\msaporetti\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/06/17 14:17:34.000.182,C:\Marcos\Gertec\Delphi\GER7 - RC0\Unit1.fmx=C:\Users\msaporetti\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
+    <Transaction>2019/06/17 14:17:36.000.015,C:\Marcos\Gertec\Delphi\GER7 - RC0\Project1.dproj=C:\Users\msaporetti\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2019/06/17 14:42:14.000.334,=C:\Marcos\Gertec\Delphi\GER7 - RC0\libs\payment-1.14.10.181016-classes.jar</Transaction>
+    <Transaction>2019/06/17 15:10:37.000.230,=C:\Marcos\Gertec\Delphi\GER7 - RC0\G700Interface.pas</Transaction>
+    <Transaction>2019/06/17 15:10:42.000.739,=C:\Marcos\Gertec\Delphi\GER7 - RC0\GEDIPrinter.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5" Android="0123abcd"/>
+	</ActiveMobileDevice>
+	<BT_BuildType>AppStore</BT_BuildType>
+</BorlandProject>

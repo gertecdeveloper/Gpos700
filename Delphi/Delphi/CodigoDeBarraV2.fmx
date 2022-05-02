@@ -1,0 +1,173 @@
+object frmCodigoBarraV2: TfrmCodigoBarraV2
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 621
+  ClientWidth = 371
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object imgCamera: TImage
+    MultiResBitmap.LoadSize = 2
+    MultiResBitmap = <
+      item
+      end>
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    ClipParent = True
+    Position.X = 12.000000000000000000
+    Position.Y = 120.000000000000000000
+    Size.Width = 337.000000000000000000
+    Size.Height = 271.000000000000000000
+    Size.PlatformDefault = False
+    WrapMode = Stretch
+    ParentShowHint = False
+    ShowHint = False
+  end
+  object txtLeitura: TLabel
+    AutoTranslate = False
+    StyledSettings = [Family, FontColor]
+    Position.X = 16.000000000000000000
+    Position.Y = 338.000000000000000000
+    Size.Width = 345.000000000000000000
+    Size.Height = 23.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 20.000000000000000000
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+    Text = 'Leitura'
+    Visible = False
+    TabOrder = 14
+  end
+  object Camera: TCameraComponent
+    Kind = BackCamera
+    OnSampleBufferReady = CameraSampleBufferReady
+    Left = 96
+    Top = 224
+  end
+  object Label1: TLabel
+    StyledSettings = [Family, FontColor]
+    Position.X = 16.000000000000000000
+    Position.Y = 13.000000000000000000
+    Size.Width = 337.000000000000000000
+    Size.Height = 49.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 25.000000000000000000
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+    TextSettings.HorzAlign = Center
+    Text = 'Ler c'#243'digo de Barras'
+    TabOrder = 7
+  end
+  object lblResultadoLeitura: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 6
+    Position.X = 16.000000000000000000
+    Position.Y = 362.000000000000000000
+    Enabled = False
+    Size.Width = 329.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    Visible = False
+  end
+  object ListView1: TListView
+    ItemAppearanceClassName = 'TListItemAppearance'
+    ItemEditAppearanceClassName = 'TListItemDeleteAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    AllowSelection = False
+    ClipChildren = False
+    Position.X = -7.000000000000000000
+    Position.Y = 400.000000000000000000
+    Size.Width = 544.000000000000000000
+    Size.Height = 193.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 13
+    ItemAppearanceObjects.ItemObjects.Text.Font.StyleExt = {00070000000000000004000000}
+    ItemAppearanceObjects.ItemObjects.Text.TextColor = claLightgray
+  end
+  object PanelMessage: TPanel
+    Position.X = 32.000000000000000000
+    Position.Y = 216.000000000000000000
+    Size.Width = 297.000000000000000000
+    Size.Height = 161.000000000000000000
+    Size.PlatformDefault = False
+    Visible = False
+    TabOrder = 22
+    object btnOK: TButton
+      StyledSettings = [Family, Size, Style]
+      Position.X = 40.000000000000000000
+      Position.Y = 104.000000000000000000
+      Size.Width = 57.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'OK'
+      TextSettings.FontColor = claGreen
+      OnClick = btnOKClick
+    end
+    object lblMsg: TLabel
+      StyledSettings = [Family, FontColor]
+      Position.X = 40.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 241.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 17.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      Text = 'lblMsg'
+      TabOrder = 1
+    end
+    object lblMsgCode: TLabel
+      StyledSettings = [Family, FontColor]
+      Position.X = 40.000000000000000000
+      Position.Y = 40.000000000000000000
+      Size.Width = 241.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 15.000000000000000000
+      Text = 'lblMsgCode'
+      TabOrder = 2
+    end
+  end
+  object ColorButton1: TColorButton
+    Color = claCornflowerblue
+    Position.X = 8.000000000000000000
+    Position.Y = 56.000000000000000000
+    Size.Width = 337.000000000000000000
+    Size.Height = 49.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 27
+    OnClick = ColorButton1Click
+  end
+  object lblFlash: TLabel
+    Position.X = 104.000000000000000000
+    Position.Y = 58.000000000000000000
+    Size.Width = 177.000000000000000000
+    Size.Height = 47.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Flash - Desligado'
+    TabOrder = 28
+    OnClick = Label2Click
+  end
+  object MediaPlayer1: TMediaPlayer
+    Left = 192
+    Top = 224
+  end
+  object TetheringAppProfile1: TTetheringAppProfile
+    Text = 'TetheringAppProfile1'
+    Actions = <>
+    Resources = <
+      item
+        IsPublic = True
+      end>
+    Left = 152
+    Top = 224
+  end
+  object ActionList1: TActionList
+    Left = 48
+    Top = 224
+    object ShowShareSheetAction1: TShowShareSheetAction
+      Category = 'Media Library'
+    end
+  end
+end

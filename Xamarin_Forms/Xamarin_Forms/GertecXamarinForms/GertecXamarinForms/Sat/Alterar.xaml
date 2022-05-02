@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GertecXamarinForms.Sat.Alterar">
+    <ContentPage.Content>
+        <StackLayout Padding="5">
+            <StackLayout Orientation="Vertical">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label  Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" Text="Opções" FontSize="15" TextColor="Black" FontAttributes="Bold"/>
+                    <Picker Grid.Row="0" Grid.Column="1" x:Name="opcoes" Title="Selecione" />
+
+
+                    <Label Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Center" Text="Atual" FontSize="15" TextColor="Black" FontAttributes="Bold"/>
+                    <Entry Grid.Row="1" Grid.Column="1"  x:Name="txtCodAtivacao" Text="" Keyboard="Text"/>
+
+                    <Label Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center" Text="Novo" FontSize="15" TextColor="Black" FontAttributes="Bold"/>
+                    <Entry Grid.Row="2" Grid.Column="1"  x:Name="txtCodNovo" Text=""  Keyboard="Text"/>
+
+                    <Label Grid.Row="3" Grid.Column="0" VerticalTextAlignment="Center" Text="Confirmar" FontSize="15" TextColor="Black" FontAttributes="Bold"/>
+                    <Entry Grid.Row="3" Grid.Column="1"  x:Name="txtCodConfirmacao" Text=""  Keyboard="Text"/>
+
+
+                </Grid>
+
+                <StackLayout Orientation="Vertical" VerticalOptions="Center">
+                    <Button Text="Alterar"
+                        FontAttributes="Bold"
+                        Clicked="btnAlterar"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="Center">
+                    </Button>
+                </StackLayout>
+                
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

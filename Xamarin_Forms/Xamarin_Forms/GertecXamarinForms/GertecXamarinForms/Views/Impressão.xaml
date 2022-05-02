@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local1="clr-namespace:GertecXamarinForms.Controls"
+             mc:Ignorable="d"
+             x:Class="GertecXamarinForms.Views.Impressão">
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="local1:ToggleButton">
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+            </Style>
+            <Style x:Key="CheckBoxLabel" TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontSize" Value="15"/>
+            </Style>
+            <Style TargetType="Picker">
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="Title" Value="Selecione"/>
+                <Setter Property="FontSize" Value="15"/>
+            </Style>
+            <Style x:Key="fontLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout Padding="5">
+            <StackLayout Spacing="0">
+                <Label x:Name="lblVersao" Text="Funções Impressão G700/G800" VerticalOptions="Start" HorizontalOptions="Center" 
+                        TextColor="Gray" FontSize="24" FontAttributes="Bold" />
+                <Button Text="Status Impressora" Clicked="btnStatusImpressora"/>
+                <Entry x:Name="MensagemEntry" Placeholder="Escreva a sua mensagem" Margin="10, 0" />
+                <Label Text="Configuração de impressão" VerticalOptions="Start" 
+                    HorizontalOptions="Center" TextColor="Gray"  FontSize="24" FontAttributes="Bold"/>
+            </StackLayout>
+            <StackLayout HorizontalOptions="Center" Orientation="Horizontal" Spacing="9">
+                <CheckBox x:Name="checkBoxEsquerda" IsChecked="true" CheckedChanged="checkBoxEsquerdaChanged">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="Color" Value="Gray" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="IsChecked">
+                                <VisualState.Setters>
+                                    <Setter Property="Color" Value="#2196F3" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </CheckBox>
+                <Label Text="Esquerda" Style="{StaticResource CheckBoxLabel}" />
+                <CheckBox x:Name="checkBoxCentralizado" IsChecked="False" CheckedChanged="checkBoxCentralizadoChanged">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="Color" Value="Gray" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="IsChecked">
+                                <VisualState.Setters>
+                                    <Setter Property="Color" Value="#2196F3" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </CheckBox>
+                <Label Text="Centralizado" Style="{StaticResource CheckBoxLabel}"/>
+                <CheckBox x:Name="checkBoxDireita" IsChecked="False" CheckedChanged="checkBoxDireitaChanged">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="Color" Value="Gray" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="IsChecked">
+                                <VisualState.Setters>
+                                    <Setter Property="Color" Value="#2196F3" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </CheckBox>
+                <Label Text="Direita" Style="{StaticResource CheckBoxLabel}"/>
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="Center" Orientation="Horizontal" Spacing="9" HeightRequest="38">
+                <local1:ToggleButton x:Name="BoldToggleButton">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup Name="ToggleStates">
+                            <VisualState Name="ToggledOff">
+                                <VisualState.Setters>
+                                    <Setter Property="Text" Value="NEGRITO" />
+                                    <Setter Property="BackgroundColor" Value="#D5D3D3" />
+                                    <Setter Property="TextColor" Value="Black" />
+                                    <Setter Property="WidthRequest" Value="95" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState Name="ToggledOn">
+                                <VisualState.Setters>
+                                    <Setter Property="Text" Value="NEGRITO" />
+                                    <Setter Property="BackgroundColor" Value="#2196F3" />
+                                    <Setter Property="TextColor" Value="White" />
+                                    <Setter Property="WidthRequest" Value="95" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </local1:ToggleButton>
+                <local1:ToggleButton x:Name="ItalicToggleButton">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup Name="ToggleStates">
+                            <VisualState Name="ToggledOff">
+                                <VisualState.Setters>
+                                    <Setter Property="Text" Value="ITÁLICO" />
+                                    <Setter Property="BackgroundColor" Value="#D5D3D3" />
+                                    <Setter Property="TextColor" Value="Black" />
+                                    <Setter Property="WidthRequest" Value="95" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState Name="ToggledOn">
+                                <VisualState.Setters>
+                                    <Setter Property="Text" Value="ITÁLICO" />
+                                    <Setter Property="BackgroundColor" Value="#2196F3" />
+                                    <Setter Property="TextColor" Value="White" />
+                                    <Setter Property="WidthRequest" Value="95" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </local1:ToggleButton>
+                <local1:ToggleButton x:Name="SubToggleButton">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup Name="ToggleStates">
+                            <VisualState Name="ToggledOff">
+                                <VisualState.Setters>
+                                    <Setter Property="Text" Value="SUBLINHADO" />
+                                    <Setter Property="BackgroundColor" Value="#D5D3D3" />
+                                    <Setter Property="TextColor" Value="Black" />
+                                    
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState Name="ToggledOn">
+                                <VisualState.Setters>
+                                    <Setter Property="Text" Value="SUBLINHADO" />
+                                    <Setter Property="BackgroundColor" Value="#2196F3" />
+                                    <Setter Property="TextColor" Value="White" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </local1:ToggleButton>
+            </StackLayout>
+
+            <!-- Font: -->
+            <StackLayout Orientation="Horizontal" Spacing="0" >
+                <Label x:Name="labelFont" Text="Font:" Style="{StaticResource fontLabel}" WidthRequest="100"/>
+                <Picker x:Name="pckFont" />
+                <Label x:Name="labelSize" Text="  Size:" Style="{StaticResource fontLabel}"/>
+                <Picker x:Name="pckSize" />
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="Center" Orientation="Horizontal" Spacing="2">
+                <Button Text="Imprimir Texto" WidthRequest = "160" Clicked="btnImprimirTexto"/>
+                <Button Text="Imprimir Imagem" WidthRequest = "160" Clicked="btnImprimirImagem"/>
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="Start" Orientation="Horizontal" Padding="10,0" Spacing="20">
+                <Label Text="  Bar Code Height" TextColor="Gray" FontSize="14"/>
+                <Label Text="Bar Code Width" TextColor="Gray" FontSize="14"/>
+                <Label Text="BarCode" TextColor="Gray" FontSize="14"/>
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="Start" Orientation="Horizontal" Spacing="15" Padding="12, 0">
+                <Picker x:Name="pckBarCodeHeight" WidthRequest="110" />
+                <Picker x:Name="pckBarCodeWidth" WidthRequest="100"/>
+                <Picker x:Name="pckBarCodes" WidthRequest="80"/>
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="FillAndExpand" Orientation="Vertical" Spacing="0" Padding="14, 0">
+                <Button Text="Imprimir Barcode" Clicked="btnImprimirBarcode"  />
+                <Button Text="Imprimir todas funções" Clicked="btnTodasFunc" />
+            </StackLayout>
+        </StackLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:local="clr-namespace:GertecXamarinForms"
+             xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
+             xmlns:zxcm="clr-namespace:ZXing.Common;assembly=zxing.portable"
+             xmlns:local1="clr-namespace:GertecXamarinForms.Controls"
+             x:Class="GertecXamarinForms.Views.LeitorCodigoBarrasV2">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Ler código de barras" VerticalOptions="Start" HorizontalOptions="Center" FontAttributes="Bold" FontSize="35" TextColor="Black"/>
+            <StackLayout HorizontalOptions="Center" Orientation="Horizontal" HeightRequest="38">
+                <local1:ToggleButton x:Name="BoldToggleButton">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup Name="ToggleStates">
+                            <VisualState Name="ToggledOff">
+                                <VisualState.Setters>
+                                    <Setter Property="Text" Value="Flash - Desligado" />
+                                    <Setter Property="BackgroundColor" Value="#2196F3" />
+                                    <Setter Property="TextColor" Value="Black" />
+                                    <Setter Property="WidthRequest" Value="340" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState Name="ToggledOn">
+                                <VisualState.Setters>
+                                    <Setter Property="Text" Value="Flash - Ligado" />
+                                    <Setter Property="BackgroundColor" Value="#2196F3" />
+                                    <Setter Property="TextColor" Value="Black" />
+                                    <Setter Property="WidthRequest" Value="340" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </local1:ToggleButton>
+            </StackLayout>
+            <StackLayout HeightRequest="300">
+                <zxing:ZXingScannerView x:Name="BarcodeScanView" IsVisible="True" OnScanResult="Handle_OnScanResult"/>
+            </StackLayout>
+            <Label Text="" x:Name="btnResult" VerticalOptions="Start" HorizontalOptions="Start" FontSize="16" Margin="10"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

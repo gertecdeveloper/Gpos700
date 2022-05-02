@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="GertecXamarinForms.Views.LeitorCodigoBarras">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="StyleButton" TargetType="Button">
+                <Setter Property="TextColor" Value="Red"/>
+                <Setter Property="BackgroundColor" Value="#2c8cf9"/>
+                <Setter Property="Scale" Value="0.9"/>
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Ler código de barras" VerticalOptions="Start" HorizontalOptions="Center" FontAttributes="Bold" FontSize="37" TextColor="Black"/>
+
+            <StackLayout Spacing="1" HorizontalOptions="Center" Orientation="Horizontal" >
+                <Button Text="EAN 8" x:Name="Ean8" Style="{StaticResource StyleButton}"/>
+                <Button Text="EAN 13" x:Name="Ean13" Style="{StaticResource StyleButton}"/>
+                <Button Text="EAN 14" x:Name="Ean14" Style="{StaticResource StyleButton}"/>
+                <Button Text="QRCODE" x:Name="Qrcode" Style="{StaticResource StyleButton}"/>
+            </StackLayout>
+            <ListView HasUnevenRows="true" x:Name="ListResultadosBarCod" RowHeight="10" ItemsSource="{Binding resultadosBarCod}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" VerticalOptions="Start" Margin="15, 0">
+                                <StackLayout HorizontalOptions="StartAndExpand">
+                                    <Label Text="{Binding}" TextColor="Gray" FontAttributes="Bold" FontSize="18"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

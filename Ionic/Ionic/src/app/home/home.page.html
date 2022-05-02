@@ -1,0 +1,70 @@
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col class="header">
+        <img src="assets/gertec.png">
+        <h1>Ionic - RC03</h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item button (click)="codigobarras1()"> <!-- (click)="testClick()" -->
+          <ion-thumbnail slot="start">
+            <img src="assets/barcode.png">
+          </ion-thumbnail>
+          <ion-label style="text-align: center;">
+            <h1>Código de Barras</h1>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item button (click)="codbarrasv2()">
+          <ion-thumbnail slot="start">
+            <img src="assets/qr_code.png">
+          </ion-thumbnail>
+          <ion-label style="text-align: center;">
+            <h1>Código de Barras V2</h1>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item button (click)="impressao()">
+          <ion-thumbnail slot="start">
+            <img src="assets/print.png">
+          </ion-thumbnail>
+          <ion-label style="text-align: center;">
+            <h1>Impressão</h1>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item button (click)="nfcGedi()">
+          <ion-thumbnail slot="start">
+            <img src="assets/nfc.png">
+          </ion-thumbnail>
+          <ion-label style="text-align: center;">
+            <h1>NFC Gedi</h1>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item button (click)="nfcId()">
+          <ion-thumbnail slot="start">
+            <img src="assets/nfc1.png">
+          </ion-thumbnail>
+          <ion-label style="text-align: center;">
+            <h1>NFC Id</h1>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,372 @@
+object frmTEF: TfrmTEF
+  Left = 0
+  Top = 0
+  Caption = 'Form4'
+  ClientHeight = 621
+  ClientWidth = 374
+  SystemStatusBar.BackgroundColor = claWhite
+  StyleBook = StyleBook1
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  DesignerMasterStyle = 3
+  object Panel1: TPanel
+    Align = Client
+    Size.Width = 374.000000000000000000
+    Size.Height = 548.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    object VertScrollBox1: TVertScrollBox
+      Align = Client
+      Size.Width = 374.000000000000000000
+      Size.Height = 548.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'VertScrollBox1Style1'
+      TabOrder = 0
+      Viewport.Width = 374.000000000000000000
+      Viewport.Height = 548.000000000000000000
+      object grpParcelamento: TGroupBox
+        StyledSettings = [Family, Other]
+        Position.X = 184.000000000000000000
+        Position.Y = 80.000000000000000000
+        Size.Width = 185.000000000000000000
+        Size.Height = 169.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Tipo de Parcelamento'
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claGray
+        TabOrder = 0
+        object rdgParceladoLoja: TRadioButton
+          StyledSettings = [Family, Style, FontColor]
+          GroupName = '1'
+          Position.X = 24.000000000000000000
+          Position.Y = 19.000000000000000000
+          Size.Width = 249.000000000000000000
+          Size.Height = 41.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          Text = 'Parcelado Loja'
+          TextSettings.Font.Size = 14.000000000000000000
+        end
+        object rdgParceladoAdm: TRadioButton
+          StyledSettings = [Family, Style, FontColor]
+          GroupName = '1'
+          IsChecked = True
+          Position.X = 24.000000000000000000
+          Position.Y = 59.000000000000000000
+          Size.Width = 265.000000000000000000
+          Size.Height = 41.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          Text = 'Parcelado Adm'
+          TextSettings.Font.Size = 14.000000000000000000
+        end
+      end
+      object rdgGer7: TCheckBox
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 120.000000000000000000
+        Position.Y = 312.000000000000000000
+        Size.Width = 73.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'radiobuttonstyle'
+        TabOrder = 1
+        Text = 'Ger7'
+        TextSettings.Font.Size = 16.000000000000000000
+        ParentShowHint = False
+        ShowHint = False
+        OnChange = rdgGer7Change
+      end
+      object rdgMsitef: TCheckBox
+        StyledSettings = [Family, Style, FontColor]
+        IsChecked = True
+        Position.X = 200.000000000000000000
+        Position.Y = 312.000000000000000000
+        Size.Width = 89.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'radiobuttonstyle'
+        TabOrder = 2
+        Text = 'M-Sitef'
+        TextSettings.Font.Size = 16.000000000000000000
+        OnChange = rdgMsitefChange
+      end
+      object lblAPI: TLabel
+        AutoSize = True
+        StyledSettings = [Family]
+        Position.X = 8.000000000000000000
+        Position.Y = 312.000000000000000000
+        Size.Width = 121.000000000000000000
+        Size.Height = 20.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claGray
+        Text = 'Escolha API'
+        TabOrder = 3
+      end
+      object chkImpressao: TCheckBox
+        Enabled = False
+        StyledSettings = [Family, FontColor]
+        IsChecked = True
+        Position.X = 8.000000000000000000
+        Position.Y = 350.000000000000000000
+        Size.Width = 153.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        Text = 'Habilita Impress'#227'o'
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+      object cmdCancelarTransacao: TButton
+        StyledSettings = [Family, FontColor]
+        Position.X = 8.000000000000000000
+        Position.Y = 416.000000000000000000
+        Size.Width = 345.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 5
+        Text = 'CANCELAR TRANSA'#199#195'O'
+        TextSettings.Font.Size = 16.000000000000000000
+        OnClick = cmdCancelarTransacaoClick
+      end
+      object cmdEnviarTransacao: TButton
+        StyledSettings = [Family, FontColor]
+        Position.X = 8.000000000000000000
+        Position.Y = 376.000000000000000000
+        Size.Width = 345.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 6
+        Text = 'ENVIAR TRANSA'#199#195'O'
+        TextSettings.Font.Size = 16.000000000000000000
+        OnClick = cmdEnviarTransacaoClick
+      end
+      object cmdFuncoes: TButton
+        StyledSettings = [Family, FontColor]
+        Position.X = 8.000000000000000000
+        Position.Y = 456.000000000000000000
+        Size.Width = 345.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 7
+        Text = 'FUN'#199#213'ES'
+        TextSettings.Font.Size = 16.000000000000000000
+        OnClick = cmdFuncoesClick
+      end
+      object cmdReimpressao: TButton
+        StyledSettings = [Family, FontColor]
+        Position.X = 8.000000000000000000
+        Position.Y = 496.000000000000000000
+        Size.Width = 345.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 8
+        Text = 'REIMPRESS'#195'O'
+        TextSettings.Font.Size = 16.000000000000000000
+        OnClick = cmdReimpressaoClick
+      end
+      object edtParcelas: TNumberBox
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 9
+        Cursor = crIBeam
+        Value = 1.000000000000000000
+        Position.X = 8.000000000000000000
+        Position.Y = 272.000000000000000000
+        Size.Width = 353.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object grpFormaPagamento: TGroupBox
+        StyledSettings = [Family, Other]
+        Position.Y = 80.000000000000000000
+        Size.Width = 201.000000000000000000
+        Size.Height = 169.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Pagamento a ser utilizado'
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claGray
+        TabOrder = 10
+        object rdgCredito: TRadioButton
+          StyledSettings = [Family, Style, FontColor]
+          IsChecked = True
+          Position.X = 24.000000000000000000
+          Position.Y = 24.000000000000000000
+          Size.Width = 113.000000000000000000
+          Size.Height = 41.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 6
+          Text = 'Cr'#233'dito'
+          TextSettings.Font.Size = 14.000000000000000000
+          OnChange = rdgCreditoChange
+        end
+        object rdgDebito: TRadioButton
+          StyledSettings = [Family, Style, FontColor]
+          Position.X = 24.000000000000000000
+          Position.Y = 62.000000000000000000
+          Size.Width = 121.000000000000000000
+          Size.Height = 41.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 4
+          Text = 'D'#233'bito'
+          TextSettings.Font.Size = 14.000000000000000000
+          OnChange = rdgDebitoChange
+        end
+        object rdgTodos: TRadioButton
+          StyledSettings = [Family, Style, FontColor]
+          Position.X = 24.000000000000000000
+          Position.Y = 96.000000000000000000
+          Size.Width = 137.000000000000000000
+          Size.Height = 49.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 5
+          Text = 'Voucher (Ger7)'
+          TextSettings.Font.Size = 14.000000000000000000
+          OnChange = rdgTodosChange
+        end
+        object Label1: TLabel
+          StyledSettings = [Family, Style, FontColor]
+          Position.X = 40.000000000000000000
+          Position.Y = 128.000000000000000000
+          Size.Width = 120.000000000000000000
+          Size.Height = 25.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 14.000000000000000000
+          Text = ' Todos (Msitef) '
+          TabOrder = 7
+        end
+      end
+      object lblParcelas: TLabel
+        AutoSize = True
+        StyledSettings = [Family]
+        Position.X = 8.000000000000000000
+        Position.Y = 249.000000000000000000
+        Size.Width = 217.000000000000000000
+        Size.Height = 20.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claGray
+        Text = 'N'#250'mero de Parcelas'
+        TabOrder = 11
+      end
+      object edtIPServidor: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 12
+        KeyboardType = NumberPad
+        Position.X = 176.000000000000000000
+        Position.Y = 32.000000000000000000
+        Size.Width = 193.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = '192.168.0.1'
+        OnChangeTracking = edtIPServidorChangeTracking
+      end
+      object edtValor: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 13
+        KeyboardType = NumberPad
+        Text = '10,00'
+        Position.X = 16.000000000000000000
+        Position.Y = 32.000000000000000000
+        Size.Width = 145.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        OnChangeTracking = edtValorChange
+      end
+      object lblIP: TLabel
+        AutoSize = True
+        StyledSettings = [Family]
+        Position.X = 176.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 193.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claGray
+        Text = 'IP (somente para o M-Sitef)'
+        TabOrder = 14
+      end
+      object lblValor: TLabel
+        AutoSize = True
+        StyledSettings = [Family]
+        Position.X = 16.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 73.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claGray
+        Text = 'Valor R$'
+        TabOrder = 15
+      end
+      object Edit2: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 16
+        Position.X = 104.000000000000000000
+        Position.Y = 696.000000000000000000
+        Size.Width = 145.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        Visible = False
+      end
+      object Edit1: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 17
+        Position.X = 448.000000000000000000
+        Position.Y = 520.000000000000000000
+        Visible = False
+      end
+    end
+  end
+  object StyleBook1: TStyleBook
+    Styles = <
+      item
+      end
+      item
+        Platform = 'Windows 10 Desktop'
+        ResourcesBin = {
+          464D585F5354594C4520322E3501061150616E656C546974756C6F5374796C65
+          3103BF00060C50616E656C315374796C653103B10000545046300A5452656374
+          616E676C6500095374796C654E616D65061150616E656C546974756C6F537479
+          6C653105416C69676E070643656E7465720A46696C6C2E436F6C6F720708636C
+          6157686974650748697454657374080A53697A652E5769647468050000000000
+          0080CA07400B53697A652E4865696768740500000000000000D906401453697A
+          652E506C6174666F726D44656661756C74080C5374726F6B652E436F6C6F7207
+          097846464343434343430756697369626C65080000545046300A545265637461
+          6E676C6500095374796C654E616D65060C50616E656C315374796C653105416C
+          69676E070643656E7465720A46696C6C2E436F6C6F720708636C615768697465
+          0748697454657374080A53697A652E57696474680500000000000080CC07400B
+          53697A652E4865696768740500000000000000D205401453697A652E506C6174
+          666F726D44656661756C74080C5374726F6B652E436F6C6F7207097846464343
+          434343430000}
+      end>
+  end
+  object PanelTitulo: TPanel
+    Align = MostTop
+    Size.Width = 374.000000000000000000
+    Size.Height = 73.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'PanelTituloStyle1'
+    TabOrder = 4
+    object lblTitulo: TLabel
+      Align = Client
+      StyledSettings = [Family]
+      Size.Width = 374.000000000000000000
+      Size.Height = 73.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 26.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claGray
+      TextSettings.HorzAlign = Center
+      Text = 'Exemplo TEF API - Delphi'
+      TabOrder = 0
+    end
+  end
+end

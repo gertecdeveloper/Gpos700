@@ -1,0 +1,40 @@
+object frmNFCbc: TfrmNFCbc
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 523
+  ClientWidth = 308
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object lblMensagem: TLabel
+    Align = Center
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    StyledSettings = [Family, Style, FontColor]
+    Size.Width = 308.000000000000000000
+    Size.Height = 64.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 30.000000000000000000
+    TextSettings.HorzAlign = Center
+    Text = 'Gertec 2A'
+    TabOrder = 0
+  end
+  object btnIdCartao: TButton
+    Position.X = 16.000000000000000000
+    Position.Y = 24.000000000000000000
+    Size.Width = 145.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'Ler ID Cart'#227'o'
+    OnClick = btnIdCartaoClick
+  end
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 100
+    OnTimer = Timer1Timer
+    Left = 248
+    Top = 8
+  end
+end

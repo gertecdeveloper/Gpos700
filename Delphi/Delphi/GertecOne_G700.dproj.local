@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<ActiveMobileDevice>
+		<NoProfile Android="0123abcd" Android64="0123abcd"/>
+	</ActiveMobileDevice>
+	<Transactions>
+    <Transaction>2020/07/14 10:12:04.000.664,D:\Marcos\Gertec\UEA\Delphi-2020-07-13\delphi-master-RC03\GertecOne Framework_G700 e G800\libs\payment-1.14.10.181016_classes.jar=</Transaction>
+    <Transaction>2020/07/14 10:12:28.000.542,=D:\Marcos\Gertec\UEA\Delphi-2020-07-13\delphi-master-RC03\GertecOne Framework_G700 e G800\libs\payment-1.14.10.181016_classesF.jar</Transaction>
+    <Transaction>2020/07/14 10:44:19.000.865,=D:\Marcos\Gertec\UEA\Delphi-2020-07-13\delphi-master-RC03\GertecOne Framework_G700 e G800\libs\payment-1.14.10.181016_classes.jar</Transaction>
+    <Transaction>2020/07/14 11:03:05.000.688,=D:\Marcos\Gertec\UEA\Delphi-2020-07-13\delphi-master-RC03\GertecOne Framework_G700 e G800\libs\payment-1.14.13.190425.jar</Transaction>
+    <Transaction>2020/07/14 11:18:30.000.388,=D:\Marcos\Gertec\UEA\Delphi-2020-07-13\delphi-master-RC03\payment-1.14.10.181016_classes.jar</Transaction>
+    <Transaction>2020/07/14 11:44:39.870,=D:\Marcos\Gertec\UEA\Delphi-2020-07-13\Delphi-GPOS700 - MSitef Ger7\GertecOne Framework_GPOS700 - MSitef Ger7\libs\payment-1.14.10.181016_classes.jar</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GertecXamarinForms.Sat.Rede">
+    <ContentPage.Content>
+        <ScrollView>
+        
+        <StackLayout Padding="5">
+            <StackLayout Orientation="Vertical">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" Text="Código de Ativação" FontSize="15" TextColor="Black" FontAttributes="Bold"/>
+                    <Entry Grid.Row="0" Grid.Column="1"  x:Name="txtCodAtivacao" Text="" Keyboard="Text"/>
+
+                    <Label  Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Center" Text="Tipo de rede" FontSize="15" TextColor="Black" FontAttributes="Bold"/>
+                    <Picker Grid.Row="1" Grid.Column="1" SelectedIndexChanged="tipoRede_SelectedIndexChanged" x:Name="tipoRede" Title="Selecione" />
+
+                    <Label Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center" Text="IP SAT" FontSize="15" TextColor="Black" FontAttributes="Bold"/>
+                    <Entry Grid.Row="2" Grid.Column="1"  x:Name="txtIp" Text="" Keyboard="Numeric"/>
+
+                    <Label Grid.Row="3" Grid.Column="0" VerticalTextAlignment="Center" Text="Máscara" FontSize="15" TextColor="Black" FontAttributes="Bold"/>
+                    <Entry Grid.Row="3" Grid.Column="1"  x:Name="txtMascara" Text="" Keyboard="Numeric"/>
+
+                    <Label Grid.Row="4" Grid.Column="0" VerticalTextAlignment="Center" Text="Gateway" FontSize="15" TextColor="Black" FontAttributes="Bold"/>
+                    <Entry Grid.Row="4" Grid.Column="1"  x:Name="txtGateway" Text="" Keyboard="Numeric"/>
+
+                    <Label  Grid.Row="5" Grid.Column="0" VerticalTextAlignment="Center" Text="DNS" FontSize="15" TextColor="Black" FontAttributes="Bold"/>
+                    <Picker Grid.Row="5" Grid.Column="1" SelectedIndexChanged="optDns_SelectedIndexChanged" x:Name="optDns" Title="Selecione" />
+
+                    <Label Grid.Row="6" Grid.Column="0" VerticalTextAlignment="Center" Text="DNS 1" FontSize="15" TextColor="Black" FontAttributes="Bold"/>
+                    <Entry Grid.Row="6" Grid.Column="1"  x:Name="txtDns" Text="" Keyboard="Numeric"/>
+
+                    <Label Grid.Row="7" Grid.Column="0" VerticalTextAlignment="Center" Text="DNS 2" FontSize="15" TextColor="Black" FontAttributes="Bold"/>
+                     <Entry Grid.Row="7" Grid.Column="1"  x:Name="txtDns2" Text="" Keyboard="Numeric"/>
+
+                    <Label  Grid.Row="8" Grid.Column="0" VerticalTextAlignment="Center" Text="Proxy" FontSize="15" TextColor="Black" FontAttributes="Bold"/>
+                    <Picker Grid.Row="8" Grid.Column="1" SelectedIndexChanged="optProxy_SelectedIndexChanged" x:Name="optProxy" Title="Selecione" />
+
+                    <Label Grid.Row="9" Grid.Column="0" VerticalTextAlignment="Center" Text="Proxy IP" FontSize="15" TextColor="Black" FontAttributes="Bold"/>
+                    <Entry Grid.Row="9" Grid.Column="1"  x:Name="txtProxyIp" Text="" Keyboard="Numeric"/>
+
+                    <Label Grid.Row="10" Grid.Column="0" VerticalTextAlignment="Center" Text="Porta" FontSize="15" TextColor="Black" FontAttributes="Bold"/>
+                    <Entry Grid.Row="10" Grid.Column="1"  x:Name="txtPorta" Text="" Keyboard="Numeric"/>
+
+                    <Label Grid.Row="11" Grid.Column="0" VerticalTextAlignment="Center" Text="User" FontSize="15" TextColor="Black" FontAttributes="Bold"/>
+                    <Entry Grid.Row="11" Grid.Column="1"  x:Name="txtUser" Text="" Keyboard="Text"/>
+
+                    <Label Grid.Row="12" Grid.Column="0" VerticalTextAlignment="Center" Text="Password" FontSize="15" TextColor="Black" FontAttributes="Bold"/>
+                    <Entry Grid.Row="12" Grid.Column="1"  x:Name="txtPassword" Text="" Keyboard="Text"/>
+
+
+                </Grid>
+
+                <StackLayout Orientation="Vertical" VerticalOptions="Center">
+                    <Button Text="Enviar"
+                        FontAttributes="Bold"
+                        Clicked="btnConfigurarRedeSat"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="Center">
+                    </Button>
+                </StackLayout>
+
+            </StackLayout>
+
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,166 @@
+<ion-content>
+  <div id="content">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <h1>Funções Impressao G700/G800</h1>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button color="secondary" expand="full" (click)="checarImpressora()">Status Impressora</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item class="input-item">
+            <ion-label position="floating">Escreva sua mensagem</ion-label>
+            <ion-input type="text" [(ngModel)]="mensagem" id="mensagem"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <h1>Configuração de impressão</h1>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-row radio-group>
+            <ion-radio-group allow-empty-selection="false" name="radio-group" (ionChange)="radioGroupChange($event)"> 
+              <ion-col>
+                <ion-radio class="radio" value="LEFT"></ion-radio>
+                <ion-label class="label-right">Esquerda</ion-label>
+              </ion-col>
+      
+              <ion-col>
+                <ion-radio class="radio" value="CENTER"></ion-radio>
+                <ion-label class="label-right">Centralizado</ion-label>
+              </ion-col>
+      
+              <ion-col>
+                <ion-radio class="radio" value="RIGHT"></ion-radio>
+                <ion-label class="label-right-right">Direita</ion-label>
+              </ion-col>
+            </ion-radio-group>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-col class="first-button">
+            <ion-button (click)="listSelecionado[0] = !listSelecionado[0]" [color]="listSelecionado[0]?'primary':'secondary'">Negrito</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button (click)="listSelecionado[1] = !listSelecionado[1]" [color]="listSelecionado[1]?'primary':'secondary'">Itálico</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button (click)="listSelecionado[2] = !listSelecionado[2]" [color]="listSelecionado[2]?'primary':'secondary'">Sublinhado</ion-button>
+          </ion-col>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="font-size">
+        <h2>Font:</h2>
+        <ion-list>
+          <ion-select placeholder="DEFAULT" (ionChange)="optionsFont($event);" cancelText="Cancelar" interface="action-sheet">
+            <ion-select-option value="DEFAULT">DEFAULT</ion-select-option>
+            <ion-select-option value="MONOSPACE">MONOSPACE</ion-select-option>
+            <ion-select-option value="SANS SERIF">SANS SERIF</ion-select-option>
+            <ion-select-option value="SERIF">SERIF</ion-select-option>
+            <ion-select-option value="VECTRA.otf">VECTRA.otf</ion-select-option>
+          </ion-select>
+        </ion-list>
+        <h2>Size:</h2>
+        <ion-list>
+          <ion-select class="label-left" placeholder="60" (ionChange)="optionsSize($event);" cancelText="Cancelar" interface="action-sheet">
+            <ion-select-option value="20">20</ion-select-option>
+            <ion-select-option value="30">30</ion-select-option>
+            <ion-select-option value="40">40</ion-select-option>
+            <ion-select-option value="50">50</ion-select-option>
+            <ion-select-option value="60">60</ion-select-option>
+            <ion-select-option value="70">70</ion-select-option>
+            <ion-select-option value="80">80</ion-select-option>
+            <ion-select-option value="90">90</ion-select-option>
+            <ion-select-option value="100">100</ion-select-option>
+          </ion-select>
+        </ion-list>
+      </ion-row>
+
+      <ion-row class="button-text-img">
+          <ion-button color="secondary" (click)="imprimirTexto()">Imprimir Texto</ion-button>
+          <ion-button color="secondary" (click)="imprimirImagem()">Imprimir Imagem</ion-button>
+      </ion-row>
+
+      <ion-row>
+        <ion-col class="bar-code-size">
+          <ion-row>
+            <p>Bar Code Height</p>
+            <p>Bar Code Width</p>
+            <p>BarCodes</p>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="options-barcode">
+        <ion-col>
+          <ion-row>
+            <ion-list class="options-barcode1">
+              <ion-select class="label-left" placeholder="280" (ionChange)="optionsBarCodeHeight($event);" cancelText="Cancelar" interface="action-sheet">
+                <ion-select-option value="10">10</ion-select-option>
+                <ion-select-option value="40">40</ion-select-option>
+                <ion-select-option value="80">80</ion-select-option>
+                <ion-select-option value="120">120</ion-select-option>
+                <ion-select-option value="160">160</ion-select-option>
+                <ion-select-option value="200">200</ion-select-option>
+                <ion-select-option value="240">240</ion-select-option>
+                <ion-select-option value="280">280</ion-select-option>
+                <ion-select-option value="320">320</ion-select-option>
+                <ion-select-option value="380">380</ion-select-option>
+              </ion-select>
+            </ion-list>
+
+            <ion-list class="options-barcode1">
+              <ion-select class="label-left" placeholder="280" (ionChange)="optionsBarCodeWidth($event);" cancelText="Cancelar" interface="action-sheet">
+                <ion-select-option value="10">10</ion-select-option>
+                <ion-select-option value="40">40</ion-select-option>
+                <ion-select-option value="80">80</ion-select-option>
+                <ion-select-option value="120">120</ion-select-option>
+                <ion-select-option value="160">160</ion-select-option>
+                <ion-select-option value="200">200</ion-select-option>
+                <ion-select-option value="240">240</ion-select-option>
+                <ion-select-option value="280">280</ion-select-option>
+                <ion-select-option value="320">320</ion-select-option>
+                <ion-select-option value="380">380</ion-select-option>
+              </ion-select>
+            </ion-list>
+
+            <ion-list>
+              <ion-select class="label-left" placeholder="QR_CODE" (ionChange)="optionsBarCodeTipo($event);" cancelText="Cancelar" interface="action-sheet">
+                <ion-select-option value="QR_CODE">QR_CODE</ion-select-option>
+                <ion-select-option value="CODE_128">CODE_128</ion-select-option>
+                <ion-select-option value="EAN_8">EAN_8</ion-select-option>
+                <ion-select-option value="EAN_13">EAN_13</ion-select-option>
+                <ion-select-option value="PDF_417">PDF_417</ion-select-option>
+              </ion-select>
+            </ion-list>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-button color="secondary" expand="full" (click)="imprimirBarCode()">Imprimir BarCode</ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-button color="secondary" expand="full" (click)="todasFunc()">Imprimir Todas Funções</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

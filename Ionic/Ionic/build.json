@@ -1,0 +1,13 @@
+{
+    "android": {
+        "debug": {
+        },
+        "release": {
+            "keystore": "C:/Users/maris/Desktop/IonicProjects/Chaves/Development_GertecDeveloper_EnhancedAPP.jks",
+            "storePassword": "Development@GertecDeveloper2018",
+            "alias": "developmentgertecdeveloper_enhancedapp",
+            "password" : "Development@GertecDeveloper2018",
+            "keystoreType": ""
+        }
+    }
+}

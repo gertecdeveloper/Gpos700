@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local1="clr-namespace:GertecXamarinForms.Controls"
+             mc:Ignorable="d"
+             x:Class="GertecXamarinForms.Views.Tef">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            
+            <Style x:Key="CheckBoxLabel" TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontSize" Value="13"/>
+            </Style>            
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout Padding="8">
+            <StackLayout Spacing="0">
+                <Label x:Name="lblVersao" Text="Exemplo TEF API - Xamarin Forms" VerticalOptions="Start" HorizontalOptions="Center" 
+                        TextColor="Gray" FontSize="22" FontAttributes="Bold" />
+
+            </StackLayout>
+            
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="40">
+                <StackLayout Orientation="Vertical" Spacing="0">
+                    <Label Text="Valor em R$ " FontSize="15" TextColor="Gray" FontAttributes="Bold"/>
+                    <Entry x:Name="valPag" Placeholder="R$ 10,00" Keyboard="Numeric">
+                        <Entry.Behaviors>
+                            <local1:MascaraMoeda />
+                        </Entry.Behaviors>
+                    </Entry>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical" Spacing="0">                    
+                    <Label Text="IP Servidor (somente M-Sitef)" FontSize="15" TextColor="Gray" FontAttributes="Bold"/>
+                    <Entry x:Name="ipEdit" Text="" Placeholder="192.168.15.8" Margin="5,0" Keyboard="Telephone"/>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                <StackLayout Orientation="Vertical" HorizontalOptions="Start" Spacing="0">
+                    <Label Text="Pagamento a ser utilizado" FontSize="13" TextColor="Gray" FontAttributes="Bold"/>
+                    <StackLayout HorizontalOptions="Start" Orientation="Horizontal" Spacing="0">
+                        <CheckBox x:Name="checkBoxCredito" IsChecked="true" CheckedChanged="checkBoxCreditoChanged">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal">
+                                        <VisualState.Setters>
+                                            <Setter Property="Color" Value="Gray" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                    <VisualState x:Name="IsChecked">
+                                        <VisualState.Setters>
+                                            <Setter Property="Color" Value="#2196F3" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                        </CheckBox>
+                        <Label Text="Crédito" Style="{StaticResource CheckBoxLabel}"/>
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="Start" Orientation="Horizontal" Spacing="0">
+                        <CheckBox x:Name="checkBoxDebito" IsChecked="False" CheckedChanged="checkBoxDebitoChanged">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal">
+                                        <VisualState.Setters>
+                                            <Setter Property="Color" Value="Gray" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                    <VisualState x:Name="IsChecked">
+                                        <VisualState.Setters>
+                                            <Setter Property="Color" Value="#2196F3" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                        </CheckBox>
+                        <Label Text="Débito" Style="{StaticResource CheckBoxLabel}"/>
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="Start" Orientation="Horizontal" Spacing="0">
+                        <CheckBox x:Name="checkBoxTodos" IsChecked="False" CheckedChanged="checkBoxTodosChanged">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal">
+                                        <VisualState.Setters>
+                                            <Setter Property="Color" Value="Gray" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                    <VisualState x:Name="IsChecked">
+                                        <VisualState.Setters>
+                                            <Setter Property="Color" Value="#2196F3" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                        </CheckBox>
+                        <Label Text="Todos (M-Sitef) Voucher (Ger7)" Style="{StaticResource CheckBoxLabel}"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="Start" Spacing="0">
+                    <Label Text="Tipo de parcelamento" FontSize="13" TextColor="Gray" FontAttributes="Bold"/>
+                    <StackLayout HorizontalOptions="Start" Orientation="Horizontal" Spacing="0">
+                        <CheckBox x:Name="checkParcLoja" IsChecked="False" CheckedChanged="checkParcLojaChanged">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal">
+                                        <VisualState.Setters>
+                                            <Setter Property="Color" Value="Gray" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                    <VisualState x:Name="IsChecked">
+                                        <VisualState.Setters>
+                                            <Setter Property="Color" Value="#2196F3" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                        </CheckBox>
+                        <Label Text="Parcelado Loja" Style="{StaticResource CheckBoxLabel}"/>
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="Start" Orientation="Horizontal" Spacing="0">
+                        <CheckBox x:Name="checkParcAdm" IsChecked="True" CheckedChanged="checkParcAdmChanged">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal">
+                                        <VisualState.Setters>
+                                            <Setter Property="Color" Value="Gray" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                    <VisualState x:Name="IsChecked">
+                                        <VisualState.Setters>
+                                            <Setter Property="Color" Value="#2196F3" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                        </CheckBox>
+                        <Label Text="Parcelado Adm" Style="{StaticResource CheckBoxLabel}"/>
+                    </StackLayout>                    
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical" Spacing="0">
+                <Label Text="Número de Parcelas" FontSize="15" TextColor="Gray" FontAttributes="Bold"/>
+                <Entry x:Name="qtdeParcelas" Placeholder="0" Margin="5,0" Keyboard="Numeric"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Spacing="25">
+                <Label Text="Escolha a API:" FontSize="15" TextColor="Gray" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Spacing="40">                    
+                    <StackLayout HorizontalOptions="Start" Orientation="Horizontal">
+                        <CheckBox x:Name="checkGer7" IsChecked="False" CheckedChanged="checkGer7Changed">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal">
+                                        <VisualState.Setters>
+                                            <Setter Property="Color" Value="Gray" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                    <VisualState x:Name="IsChecked">
+                                        <VisualState.Setters>
+                                            <Setter Property="Color" Value="#2196F3" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                        </CheckBox>
+                        <Label Text="Ger7" Style="{StaticResource CheckBoxLabel}"/>
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="Start" Orientation="Horizontal" Spacing="0">
+                        <CheckBox x:Name="checkMstef" IsChecked="True" CheckedChanged="checkMstefChanged">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal">
+                                        <VisualState.Setters>
+                                            <Setter Property="Color" Value="Gray" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                    <VisualState x:Name="IsChecked">
+                                        <VisualState.Setters>
+                                            <Setter Property="Color" Value="#2196F3" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                        </CheckBox>
+                        <Label Text="M-Sitef" Style="{StaticResource CheckBoxLabel}"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="Start" Orientation="Horizontal" Spacing="0">
+                <CheckBox x:Name="checkBoxAbilitaImpressao" IsChecked="true" CheckedChanged="checkBoxAbilitaImpressaoChanged">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="Color" Value="Gray" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="IsChecked">
+                                <VisualState.Setters>
+                                    <Setter Property="Color" Value="#2196F3" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </CheckBox>
+                <Label Text="Habilita Impressão" Style="{StaticResource CheckBoxLabel}"/>
+            </StackLayout>
+
+            
+            <StackLayout Orientation="Vertical" Spacing="0">
+                <Button Text="Enviar Transação"  Clicked="btnEnviaTrasacao"/>
+                <Button Text="Cancelar Transação" Clicked="btnCancelaTransacao" />
+                <Button Text="Funções"  Clicked="btnFuncoes"/>
+                <Button Text="Reimpressão" Clicked="btnReimpressao"/>
+            </StackLayout>
+
+
+                
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

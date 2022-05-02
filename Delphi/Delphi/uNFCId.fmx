@@ -1,0 +1,64 @@
+object frmNFCid: TfrmNFCid
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 536
+  ClientWidth = 333
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object lblMensagem: TLabel
+    Align = Center
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    StyledSettings = [Family]
+    Size.Width = 306.000000000000000000
+    Size.Height = 38.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 30.000000000000000000
+    TextSettings.HorzAlign = Center
+    Text = 'Gertec 2A'
+    TabOrder = 0
+  end
+  object btnIdCartao: TButton
+    Position.X = 16.000000000000000000
+    Position.Y = 24.000000000000000000
+    Size.Width = 145.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'Ler ID Cart'#227'o'
+    OnClick = btnIdCartaoClick
+  end
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 100
+    OnTimer = Timer1Timer
+    Left = 248
+    Top = 8
+  end
+  object lblLeitura: TLabel
+    StyledSettings = [Family, Style]
+    Position.X = 80.000000000000000000
+    Position.Y = 256.000000000000000000
+    Size.Width = 209.000000000000000000
+    Size.Height = 41.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.FontColor = claGray
+    Text = 'lblLeitura'
+    TabOrder = 4
+  end
+  object lblCartaoId: TLabel
+    StyledSettings = [Family, Style]
+    Position.X = 80.000000000000000000
+    Position.Y = 291.000000000000000000
+    Size.Width = 209.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.FontColor = claGray
+    Text = 'lblCartaoId'
+    TabOrder = 5
+  end
+end

@@ -1,0 +1,74 @@
+h1 {
+    color: gray;
+    font-weight: bold;
+    font-size: 23px;
+    text-align: center;
+    margin: 0;
+}
+
+h2 {
+    color: gray;
+    font-size: 18px;
+    text-align: center;
+    margin: 0px 0px 0px 20px;
+}
+
+p {
+    color: gray;
+    font-size: 14px;
+}
+
+ion-button {
+    font-weight: bold;
+    --border-radius: 2px !important;
+    letter-spacing: .0em;
+    margin:0;
+}
+
+ion-input {
+    margin: 0px 5px 0px 5px; 
+}
+
+ion-select {
+    color: #000;
+}
+
+.radio {
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+.font-size ion-list{
+    margin: 0px;
+    padding: 0px;
+}
+
+.font-size h2{
+    margin: 9px 15px 0px 15px;
+}
+
+.button-text-img ion-button {
+    margin: 0px 5px 0px 15px;
+}
+
+.first-button {
+    margin-left: 15px;
+}
+
+.bar-code-size {
+    margin: 0px 0px 0px 20px;
+    padding: 0px;
+}
+
+.bar-code-size p {
+    margin: 16px 10px 0px 0px;
+    padding: 0px;
+}
+
+.options-barcode ion-list {
+    padding: 0px;
+}
+
+.options-barcode1 {
+    margin-right: 50px;
+}

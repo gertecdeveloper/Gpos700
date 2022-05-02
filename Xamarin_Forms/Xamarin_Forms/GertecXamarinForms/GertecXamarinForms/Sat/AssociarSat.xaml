@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:behavior="clr-namespace:GertecXamarinForms.Controls"
+             x:Class="GertecXamarinForms.Sat.AssociarSat">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Margin="8">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label  Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" Text="CNPJ Contribuinte " FontSize="14" TextColor="Black" FontAttributes="Bold"/>
+                <Entry  Grid.Row="0" Grid.Column="1"  x:Name="cnpjContribuinte"  Keyboard="Numeric">
+                    <Entry.Behaviors>
+                        <behavior:MaskedBehavior Mask="XX.XXX.XXX/XXXX-XX" />
+                    </Entry.Behaviors>
+                </Entry>
+
+                <Label Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Center" Text="CNPJ Software House" FontSize="14" TextColor="Black" FontAttributes="Bold"/>
+                <Entry Grid.Row="1" Grid.Column="1" x:Name="cnpjSH"  Keyboard="Numeric">
+                    <Entry.Behaviors>
+                        <behavior:MaskedBehavior Mask="XX.XXX.XXX/XXXX-XX" />
+                    </Entry.Behaviors>
+                </Entry>
+
+                <Label Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center" Text="Código de Ativação" FontSize="14" TextColor="Black" FontAttributes="Bold"/>
+                <Entry Grid.Row="2" Grid.Column="1"  x:Name="txtCodAtivacao" Text=""  Keyboard="Text"/>
+
+                <Label Grid.Row="3" Grid.Column="0" VerticalTextAlignment="Center" Text="Assinatura AC" FontSize="14" TextColor="Black" FontAttributes="Bold"/>
+                <Entry Grid.Row="3" Grid.Column="1"  x:Name="txtAssinatura" Text=""  Keyboard="Text"/>
+
+            </Grid>
+            
+            
+            <StackLayout Orientation="Vertical">
+                <StackLayout Orientation="Vertical" VerticalOptions="Center">
+                    <Button Text="Alterar"
+                        FontAttributes="Bold"
+                        Clicked="btnAssociarSat"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="Center">
+                    </Button>
+                </StackLayout>
+
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2019/06/26 07:25:58.000.933,=C:\Users\User\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/06/26 07:26:27.000.338,C:\Users\User\Documents\Embarcadero\Studio\Projects\Unit1.fmx=Z:\Berlin\GER7_Berlin\Unit1.fmx</Transaction>
+    <Transaction>2019/06/26 07:26:27.000.338,C:\Users\User\Documents\Embarcadero\Studio\Projects\Unit1.pas=Z:\Berlin\GER7_Berlin\Unit1.pas</Transaction>
+    <Transaction>2019/06/26 07:26:29.000.662,C:\Users\User\Documents\Embarcadero\Studio\Projects\Project1.dproj=Z:\Berlin\GER7_Berlin\Project1.dproj</Transaction>
+    <Transaction>2019/07/04 11:42:51.584,=Z:\Berlin\GER7_Berlin\G700Interface.pas</Transaction>
+    <Transaction>2019/07/04 11:42:54.108,=Z:\Berlin\GER7_Berlin\GEDIPrinter.pas</Transaction>
+    <Transaction>2019/07/04 11:49:36.148,=Z:\Berlin\GER7_Berlin\libs\payment-1.14.10.181016-classes.jar</Transaction>
+    <Transaction>2019/07/04 11:49:44.047,=Z:\Berlin\GER7_Berlin\libs\libgedi-0.190121.gpos800-classes.jar</Transaction>
+    <Transaction>2019/07/04 11:49:44.059,=Z:\Berlin\GER7_Berlin\libs\zxing-2.1.jar</Transaction>
+    <Transaction>2019/07/04 11:51:10.255,Z:\Berlin\GER7_Berlin\libs\libgedi-0.190121.gpos800-classes.jar=</Transaction>
+    <Transaction>2019/07/04 11:51:10.395,Z:\Berlin\GER7_Berlin\libs\zxing-2.1.jar=</Transaction>
+  </Transactions>
+</BorlandProject>

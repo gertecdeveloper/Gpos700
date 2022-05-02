@@ -1,0 +1,253 @@
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="4dp">
+
+    <TextView
+        android:text="Exemplo TEF - Xamarin Forms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        android:textSize="22sp"
+        android:gravity="top|center"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:typeface="normal" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="149.0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10.0dp">
+            <TextView
+                android:text="Valor em R$"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/editValorPagamento"
+                android:layout_width="125.5dp"
+                android:layout_height="wrap_content"
+                android:hint="R$10,00"
+                android:autoText="true"
+                android:password="false"
+                android:phoneNumber="false"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:layout_marginRight="0.0dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="IP(somente para Msitef)"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/ipEdit"
+                android:layout_width="197.5dp"
+                android:digits="0123456789."
+                android:layout_height="wrap_content"
+                android:hint="192.168.0.1"
+                android:phoneNumber="true"
+                android:inputType="number|numberSigned|numberDecimal"
+             />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="192.5dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Pagamento a ser utilizado"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textStyle="bold"/>
+
+            <RadioGroup
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioGroup1">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Crédito"
+                    android:id="@+id/rbCredito" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Débito"
+                    android:id="@+id/rbDebito" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Todos (Msitef) Voucher(Ger7)"
+                    android:id="@+id/rbTodos" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Tipos de parcelamento"
+                android:layout_width="match_parent"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textStyle="bold"/>
+
+            <RadioGroup
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioGroupParcelamento">
+                <RadioButton                    
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Parcelado Loja"
+                    android:id="@+id/rbParcLoja" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Parcelado Adm"
+                    android:id="@+id/rbParcAdm" />
+            </RadioGroup>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Número de Parcelas:"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:textSize="15dp" />
+
+        <EditText
+            android:hint="Valor"
+            android:id="@+id/qtdeParcelas"
+            android:text="1"
+            android:autoText="true"
+            android:password="false"
+            android:phoneNumber="false"
+            android:digits="0123456789"
+            android:inputType="number|numberSigned|numberDecimal"
+            android:layout_width="215.0dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Esolha a API"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textStyle="bold"/>
+
+        <RadioGroup
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioGroupApi">
+            <RadioButton
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ger7"                
+                android:id="@+id/rbGer7" />
+            <RadioButton
+                android:layout_weight="1"
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="M-Sitef"
+                android:id="@+id/rbMsitef" />
+        </RadioGroup>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+            <CheckBox            
+                android:text="Habilitar Impressão"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/cbImpressao" />
+    </LinearLayout>
+
+    <Button
+        android:text="Enviar Transação"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnTransacao" />
+
+    <Button
+        android:text="Cancelar Transação"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCancelar" />
+
+    <Button
+        android:text="Funções"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnFuncoes" />
+
+    <Button
+        android:text="Reimpressão"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnReipressao" />
+
+</LinearLayout>
