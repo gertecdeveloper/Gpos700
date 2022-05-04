@@ -1,0 +1,21 @@
+GerteOne Framework GPOS700 e TSG800
+
+Este projeto pode ser utilizado em ambos os equipamentos.
+
+1º Vá em build.gradle e altere o arquivos .AAR que esta sendo compilado conforme o seu equipamento.
+
+	1) GPOS 700 deve seguir o formato abaixo
+		implementation(name: 'payment-1.14.10.181016', ext: 'aar')
+		// implementation(name:'libgedi-0.190121.gpos800', ext:'aar')
+
+	2) TSG 800  deve seguir o formato abaixo
+		// implementation(name: 'payment-1.14.10.181016', ext: 'aar')
+		implementation(name:'libgedi-0.190121.gpos800', ext:'aar')
+
+2º Ao importar o projeto vá em 
+	
+	Build -> Clean Project
+	
+	Esse procedimento é necessário para limpar qualquer arquivo de configuração usado na última compilação.
+	
+

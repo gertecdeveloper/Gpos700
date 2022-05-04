@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="2">
+
+    <TableRow
+        android:layout_width="367dp"
+        android:layout_marginTop="2sp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5sp"
+            android:text="Opções"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/Spinner1"
+            android:layout_width="274dp"
+            android:layout_height="wrap_content" />
+    </TableRow>
+
+    <TableRow android:layout_marginTop="15sp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5sp"
+            android:text="Atual"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtCodAtual"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:inputType="text">
+
+        </EditText>
+    </TableRow>
+
+    <TableRow android:layout_marginTop="15sp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5sp"
+            android:text="Novo"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtCodNovo"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:inputType="text"></EditText>
+    </TableRow>
+
+    <TableRow android:layout_marginTop="15sp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5sp"
+            android:text="Confirmar"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtCodConfirmar"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:inputType="text"></EditText>
+    </TableRow>
+
+    <RelativeLayout
+        android:layout_marginTop="15sp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/buttonAlterar"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:backgroundTint="#D6D4D4"
+            android:text="Alterar"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</TableLayout>

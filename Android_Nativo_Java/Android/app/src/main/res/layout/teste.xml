@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:layout_marginTop="5sp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5sp"
+            android:text="Código de Ativação SAT: "
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtCodAtivacao"
+            android:layout_width="153dp"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:inputType="text"></EditText>
+    </TableRow>
+
+    <Button
+        android:id="@+id/buttonConsultar"
+        android:layout_width="282dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#D6D4D4"
+        android:text="Consultar SAT"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="18dp" />
+
+    <Button
+        android:id="@+id/buttonStatus"
+        android:layout_width="282dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#D6D4D4"
+        android:text="Status Operacional"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="18dp" />
+
+    <Button
+        android:id="@+id/buttonFimaFim"
+        android:layout_width="282dp"
+        android:layout_height="50dp"
+        android:text="Teste fim a fim"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="18dp" />
+
+    <Button
+        android:id="@+id/buttonTesteVenda"
+        android:layout_width="282dp"
+        android:layout_height="50dp"
+        android:text="Enviar dados de venda"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="18dp" />
+
+    <Button
+        android:id="@+id/buttonCancelamento"
+        android:layout_width="282dp"
+        android:layout_height="50dp"
+        android:text="Cancelar venda"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="18dp" />
+
+    <Button
+        android:id="@+id/buttonConsultarSessao"
+        android:layout_width="282dp"
+        android:layout_height="50dp"
+        android:text="Consultar sessão"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+</LinearLayout>

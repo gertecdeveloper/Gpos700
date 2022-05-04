@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fadeScrollbars="false">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="right">
+
+        <TableRow
+            android:layout_marginTop="5sp"
+            android:layout_marginRight="20sp">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5sp"
+                android:text="Código de Ativação"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtCodAtivacao"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="text">
+
+            </EditText>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="15sp"
+            android:layout_marginRight="20sp">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5sp"
+                android:text="Tipo de rede"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/tipoRede"
+                android:layout_width="325dp"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="15sp"
+            android:layout_marginRight="20sp">
+
+            <TextView
+                android:layout_width="146dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5sp"
+                android:text="IP SAT"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtIp"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="text|number">
+
+            </EditText>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="15sp"
+            android:layout_marginRight="20sp">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5sp"
+                android:text="Máscara"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtMascara"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="text|number"></EditText>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="15sp"
+            android:layout_marginRight="20sp">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5sp"
+                android:text="Gateway"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtGateway"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="text|number"></EditText>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="2sp"
+            android:layout_marginRight="20sp">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5sp"
+                android:text="DNS"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/optDns"
+                android:layout_width="325dp"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="15sp"
+            android:layout_marginRight="20sp">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5sp"
+                android:text="DNS 1"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtDns"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="number">
+
+            </EditText>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="15sp"
+            android:layout_marginRight="20sp">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5sp"
+                android:text="DNS 2"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtDns2"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="number"></EditText>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="2sp"
+            android:layout_marginRight="20sp">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5sp"
+                android:text="Proxy"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/optProxy"
+                android:layout_width="325dp"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="15sp"
+            android:layout_marginRight="20sp">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5sp"
+                android:text="Proxy IP"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtProxyIp"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="number">
+
+            </EditText>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="15sp"
+            android:layout_marginRight="20sp">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5sp"
+                android:text="Porta"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtPorta"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="number"></EditText>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="15sp"
+            android:layout_marginRight="20sp">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5sp"
+                android:text="User"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtUser"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="text"></EditText>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="15sp"
+            android:layout_marginRight="20sp">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5sp"
+                android:text="Password"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtPassword"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="text"></EditText>
+        </TableRow>
+
+        <RelativeLayout
+            android:layout_marginTop="15sp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/buttonEnviar"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:backgroundTint="#D6D4D4"
+                android:text="Enviar"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </TableLayout>
+</ScrollView>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginTop="25sp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5sp"
+            android:text="Código de Ativação SAT: "
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtCodAtivacao"
+            android:layout_width="142dp"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:inputType="text"></EditText>
+    </TableRow>
+
+    <Button
+        android:id="@+id/buttonDesbloquear"
+        android:layout_width="282dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#D6D4D4"
+        android:text="Desbloquear SAT"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="18dp" />
+
+    <Button
+        android:id="@+id/buttonBloquear"
+        android:layout_width="282dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#D6D4D4"
+        android:text="Bloquear SAT"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="18dp" />
+
+    <Button
+        android:id="@+id/buttonLog"
+        android:layout_width="282dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#D6D4D4"
+        android:text="Extrair Log"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="18dp" />
+
+    <Button
+        android:id="@+id/buttonAtualizar"
+        android:layout_width="282dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#D6D4D4"
+        android:text="Atualizar Software"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="18dp" />
+
+    <Button
+        android:id="@+id/buttonVersao"
+        android:layout_width="282dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#D6D4D4"
+        android:text="Verificar Versão"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+</LinearLayout>

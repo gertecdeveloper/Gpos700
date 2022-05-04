@@ -1,0 +1,101 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="21dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:text="GERSAT - Aplicativo de Ativação"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="39dp" />
+
+    <Button
+        android:id="@+id/buttonAtivar2"
+        android:layout_width="282dp"
+        android:layout_height="50dp"
+        android:text="Ativação SAT"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:typeface="normal" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="18dp" />
+
+    <Button
+        android:id="@+id/buttonAssociar2"
+        android:layout_width="282dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#D6D4D4"
+        android:text="Associar Assinatura"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="18dp" />
+
+    <Button
+        android:id="@+id/buttonTeste"
+        android:layout_width="282dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#D6D4D4"
+        android:text="Teste SAT"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="18dp" />
+
+    <Button
+        android:id="@+id/buttonRede"
+        android:layout_width="282dp"
+        android:layout_height="50dp"
+        android:background="#D6D4D4"
+        android:text="Configurações de rede"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="18dp" />
+
+    <Button
+        android:id="@+id/buttonAlterar2"
+        android:layout_width="282dp"
+        android:layout_height="50dp"
+        android:text="Alterar Código de Ativação"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="18dp" />
+
+    <Button
+        android:id="@+id/buttonOutros"
+        android:layout_width="282dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#D6D4D4"
+        android:text="Outras Ferramentas"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+</LinearLayout>

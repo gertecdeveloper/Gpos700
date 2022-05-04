@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="2">
+
+    <TableRow
+        android:layout_marginTop="2sp"
+        android:layout_marginRight="15sp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5sp"
+            android:text="CNPJ Contribuinte"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtCNPJ"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:inputType="number">
+
+        </EditText>
+    </TableRow>
+
+    <TableRow
+        android:layout_marginTop="15sp"
+        android:paddingRight="15sp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5sp"
+            android:text="CNPJ Software House"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtSW"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:inputType="number">
+
+        </EditText>
+    </TableRow>
+
+    <TableRow
+        android:layout_marginTop="15sp"
+        android:paddingRight="15sp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5sp"
+            android:text="Código de Ativação"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtCodAtivacao"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:inputType="text"></EditText>
+    </TableRow>
+
+    <TableRow
+        android:layout_marginTop="15sp"
+        android:paddingRight="15sp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5sp"
+            android:text="Assinatura AC"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtAssinatura"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:inputType="text"></EditText>
+    </TableRow>
+
+    <RelativeLayout
+        android:layout_marginTop="15sp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/buttonAssociar"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:background="#D6D4D4"
+            android:text="Associar"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</TableLayout>
