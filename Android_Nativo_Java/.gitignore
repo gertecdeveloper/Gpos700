@@ -4,7 +4,6 @@
 .gradle
 /obj/
 /obj/Debug
-/Android
 /Win32
 /local.properties
 /.idea/caches
