@@ -611,7 +611,7 @@ class _PageTefState extends State<PageTef> {
         keyboardType: TextInputType.number,
         controller: ipServidor,
         inputFormatters: [
-          BlacklistingTextInputFormatter(RegExp("[-, ]")),
+          FilteringTextInputFormatter.deny(RegExp("[-, ]")),
         ],
         style: TextStyle(fontSize: 17),
       );
@@ -620,7 +620,7 @@ class _PageTefState extends State<PageTef> {
         decoration: InputDecoration(hintText: '192.168.0.1'),
         keyboardType: TextInputType.number,
         inputFormatters: [
-          BlacklistingTextInputFormatter(RegExp("[-, ]")),
+          FilteringTextInputFormatter.deny(RegExp("[-, ]")),
         ],
         controller: ipServidor,
         style: TextStyle(fontSize: 17),
@@ -635,7 +635,7 @@ class _PageTefState extends State<PageTef> {
       return TextFormField(
         enabled: false,
         inputFormatters: <TextInputFormatter>[
-          WhitelistingTextInputFormatter.digitsOnly,
+          FilteringTextInputFormatter.digitsOnly,
         ],
         keyboardType: TextInputType.numberWithOptions(signed: false),
         controller: numParcelas,
@@ -644,7 +644,7 @@ class _PageTefState extends State<PageTef> {
     } else {
       return TextFormField(
         inputFormatters: <TextInputFormatter>[
-          WhitelistingTextInputFormatter.digitsOnly,
+          FilteringTextInputFormatter.digitsOnly,
         ],
         keyboardType: TextInputType.numberWithOptions(signed: false),
         controller: numParcelas,
