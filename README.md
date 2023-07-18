@@ -14,9 +14,9 @@
  
  ----------------------------------------------------------------------
 
-Manual de desenvolvimento Android:
+Primeiros passos para realizar a integração:
 
-https://gertec.atlassian.net/servicedesk/customer/portal/4
+https://gertec.atlassian.net/servicedesk/customer/article/2265120876
 
 ------------------------------------------------------------------------
   - Impressão 
