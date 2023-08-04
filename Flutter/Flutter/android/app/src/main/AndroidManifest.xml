@@ -10,7 +10,7 @@
     <uses-permission android:name="android.permission.READ_OWNER_DATA"/>
     <uses-permission android:name="android.permission.WRITE_OWNER_DATA"/>
 
-    
+
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.NFC" />
 
@@ -19,7 +19,7 @@
     <uses-feature android:name="android.hardware.camera.any" android:required="true" />
 
     <application
-        android:name="io.flutter.app.FlutterApplication"
+        android:name="${applicationName}"
         android:icon="@mipmap/gertec_one"
         tools:replace="android:icon , android:label"
         android:label="GertecOne Flutter">
