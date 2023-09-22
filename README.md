@@ -20,3 +20,10 @@
 https://gertec.atlassian.net/servicedesk/customer/article/2265120876
 
 ------------------------------------------------------------------------
+# Terminal SmartPOS GPOS700 e GPOS700X
+<h2 align="left"> Link abaixo: </h2> 
+
+https://gertec.atlassian.net/servicedesk/customer/kb/view/57943879143555077
+
+
+------------------------------------------------------------------------
