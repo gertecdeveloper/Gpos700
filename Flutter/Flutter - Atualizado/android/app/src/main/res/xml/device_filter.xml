@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- 0x1753 / 0xC901: PCC 900/910 Gertec -->
+    <usb-device vendor-id="5971" product-id="51457" />
+
+    <!-- 0x1753 / 0xC902: PCC 920 Gertec -->
+    <usb-device vendor-id="5971" product-id="51458" />
+
+</resources>
