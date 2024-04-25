@@ -1,6 +1,7 @@
 # gpos700
 
 A new Flutter project.
+Versão do SDK: 3.16.9
 
 ## Getting Started
 
